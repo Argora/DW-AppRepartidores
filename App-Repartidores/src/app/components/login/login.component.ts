@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -25,19 +26,19 @@ export class LoginComponent implements OnInit {
     password: '0000'}
   ];
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
-  prueba(){
+  logIn(){
     var usuarioLogIn = this.formularioLogIn.value;
     if(this.formularioLogIn.valid){
       this.usuario = {
         usuario: usuarioLogIn.usuario,
         password: usuarioLogIn.password
       }
-      this.logIn();
+      this.confirmarUsuario();
     }else {
       Swal.fire(
         'Complete todos los campos',
@@ -47,22 +48,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  logIn(){
+  confirmarUsuario(){
     let encontrado = false;
     this.listaUsuarios.forEach((usuarioReg) =>{
       if(usuarioReg.usuario == this.usuario.usuario){
         encontrado = true;
         if(usuarioReg.password == this.usuario.password){
-          Swal.fire({
-            title: 'Inicio de sesión exitoso',
-            icon: 'success',
-            confirmButtonColor: '#3085d6',
-            confirmButtonText: 'OK'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              console.log('inicio sesion');
-            }
-          });
+          this.router.navigate(['home'])
         }else{
           Swal.fire(
             'No se pudo iniciar sesión',
