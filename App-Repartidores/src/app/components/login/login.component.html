@@ -1,0 +1,11 @@
+<h1 class="text-center mb-4">Inicar de Sesión</h1>
+<form id="formulario-login" [formGroup]="formularioLogIn" (ngSubmit)="logIn()">
+    <div class="form-group">
+        <input type="email" class="form-control" formControlName="usuario" placeholder="Usuario" required>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" formControlName="password" placeholder="Contraseña" required>
+    </div>
+    <a class="nav-link" [routerLink]="['home']">Registrarse</a><br>
+    <button type="submit" class="btn btn-primary">Iniciar</button>
+</form>

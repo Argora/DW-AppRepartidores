@@ -1,0 +1,19 @@
+
+input, button{
+    border: 1px solid black;
+    margin: 4px;
+}
+
+button{
+    width: 150px;
+    font-size: 22px;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
