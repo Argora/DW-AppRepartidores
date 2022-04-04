@@ -1,0 +1,27 @@
+.detalles {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    margin: 10px;
+    align-items: center;
+}
+
+.estado {
+    height: 10vh;
+}
+
+.direccion {
+    height: 15vh;
+}
+
+.productos {
+    height: 30vh;
+}
+
+.pro {
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: #492F66;
+    border-radius: 30px;
+}

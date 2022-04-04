@@ -1,1 +1,20 @@
-<p>home works!</p>
+<form>
+<div class="row estado">
+    <div class="col-10">Estas disponible?</div>
+    <fa-icon [icon]="faToggleOff" class="col-1"(click)="cambiarEstado()"></fa-icon>
+</div>
+<div class="container">
+    <div class="row orden" *ngFor="let ord of ordenesDisponibles" [id]="ord.id">
+        <div class="col-7">
+            <p class="h5">Orden: {{ord.id}}</p>
+            <p>Despacho: {{ord.despacho}}</p>
+            <p>Entrega: {{ord.entrega}}</p>
+        </div>
+        <div class="col-5">
+            Hora: {{ord.hora}}
+            <a routerLink="/ordenes/detalles/{{ord.id}}" class="btn btn-primary">Detalles</a>
+        </div>
+    </div>
+</div>
+
+</form>

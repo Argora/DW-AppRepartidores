@@ -1,0 +1,22 @@
+.orden {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 15vh;
+    margin-bottom: 4px;
+    align-items: center;
+}
+
+.btn {
+    background-color: #492F66;
+    border-radius: 30px;
+    margin-left: 15%;
+}
+
+p {
+    margin: 0px;
+}
+
+.estado { 
+    background-color: black;
+    color: whitesmoke;
+}
