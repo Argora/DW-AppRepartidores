@@ -1,7 +1,8 @@
 .header {
     background-color: #6628AD;
-    display: flex;
     align-items: center;
+    width: 100vw;
+    height: 10vh;
 }
 
 .titulo {

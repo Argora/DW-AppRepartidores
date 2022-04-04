@@ -19,4 +19,6 @@ p {
 .estado { 
     background-color: black;
     color: whitesmoke;
+    width: 100vw;
+    margin: 0px;
 }

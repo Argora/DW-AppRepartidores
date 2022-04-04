@@ -33,7 +33,7 @@ export class OrdenesAceptadasComponent implements OnInit {
   constructor(public titleService: Title) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle("Ordenes completadas");
+    this.titleService.setTitle("Ordenes aceptadas");
   }
 
 }
