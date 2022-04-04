@@ -29,8 +29,7 @@ export class DetallesOrdenComponent implements OnInit {
       hora: '12:00 pm',
       comision: 50,
       productos: [
-        {nombre: 'producto1', precio: 100},
-        {nombre: 'producto2', precio: 100}]
+        {nombre: 'producto1', precio: 190}]
     },
     {
       id: 3,
@@ -41,7 +40,9 @@ export class DetallesOrdenComponent implements OnInit {
       comision: 200,
       productos: [
         {nombre: 'producto1', precio: 150},
-        {nombre: 'producto2', precio: 150}]
+        {nombre: 'producto2', precio: 150},
+        {nombre: 'producto3', precio: 50},
+        {nombre: 'producto4', precio: 120}]
     },
     {
       id: 4,
@@ -52,7 +53,32 @@ export class DetallesOrdenComponent implements OnInit {
       comision: 100,
       productos: [
         {nombre: 'producto1', precio: 200},
+        {nombre: 'producto2', precio: 300},
+        {nombre: 'producto3', precio: 100}]
+    },
+    {
+      id: 5,
+      estado: 2,
+      despacho: 'Empresa a, barrio z, calle t',
+      entrega: 'Colonia m, barrio a, calle a',
+      hora: '10:00 am',
+      comision: 100,
+      productos: [
+        {nombre: 'producto1', precio: 200},
         {nombre: 'producto2', precio: 300}]
+    },
+    {
+      id: 6,
+      estado: 2,
+      despacho: 'Empresa b, barrio t, calle m',
+      entrega: 'Colonia m, barrio h, calle t',
+      hora: '6:00 pm',
+      comision: 70,
+      productos: [
+        {nombre: 'producto1', precio: 200},
+        {nombre: 'producto2', precio: 20},
+        {nombre: 'producto3', precio: 100},
+        {nombre: 'producto4', precio: 40}]
     },
   ]
 
