@@ -1,6 +1,7 @@
 <div class="detalles estado row">
     <div class="col-6 h6" *ngIf="detallesOrden.estado == 0">Estado: sin aceptar</div>
     <div class="col-6 h6" *ngIf="detallesOrden.estado == 1">Estado: aceptada</div>
+    <div class="col-6 h6" *ngIf="detallesOrden.estado == 2">Estado: completada</div>
     <div class="col-6 btn btn-primary">Cambiar estado</div>
 </div>
 <div class="detalles direccion row">
