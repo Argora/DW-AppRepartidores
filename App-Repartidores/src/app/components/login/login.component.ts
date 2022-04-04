@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -26,9 +27,10 @@ export class LoginComponent implements OnInit {
     password: '0000'}
   ];
 
-  constructor(private router : Router) { }
+  constructor(private router : Router,  public titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("Inicio de sesión");
   }
 
   logIn(){
@@ -54,7 +56,7 @@ export class LoginComponent implements OnInit {
       if(usuarioReg.usuario == this.usuario.usuario){
         encontrado = true;
         if(usuarioReg.password == this.usuario.password){
-          this.router.navigate(['home'])
+          this.router.navigate(['ordenes'])
         }else{
           Swal.fire(
             'No se pudo iniciar sesión',

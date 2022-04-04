@@ -1,0 +1,10 @@
+.header {
+    background-color: #6628AD;
+    display: flex;
+    align-items: center;
+}
+
+.titulo {
+    color: black;
+    margin-left: 5px;
+}

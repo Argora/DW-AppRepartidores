@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faToggleOff } from '@fortawesome/free-solid-svg-icons';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  faToggleOff = faToggleOff;
   ordenesDisponibles = [
     {
       id: 1,
@@ -25,7 +28,7 @@ export class HomeComponent implements OnInit {
       id: 3,
       despacho: 'Empresa y',
       entrega: 'Colonia n',
-      hora: '5:00 pm'
+      hora: '5:00 am'
     },
     {
       id: 4,
@@ -35,9 +38,14 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, public titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("Ordenes Disponibles");
+  }
+
+  cambiarEstado(){
+    console.log('cambiar estado repartidor');
   }
 
 }

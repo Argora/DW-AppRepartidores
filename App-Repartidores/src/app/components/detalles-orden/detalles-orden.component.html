@@ -1,0 +1,39 @@
+<div class="detalles estado row">
+    <div class="col-6 h6" *ngIf="detallesOrden.estado == 0">Estado: sin aceptar</div>
+    <div class="col-6 h6" *ngIf="detallesOrden.estado == 1">Estado: aceptada</div>
+    <div class="col-6 btn btn-primary">Cambiar estado</div>
+</div>
+<div class="detalles direccion row">
+    <div class="h6">
+        Direccion de despacho
+    </div>
+    <div class="col-8">
+        {{detallesOrden.despacho}}
+    </div>
+    <div class="col-4 btn btn-primary">Ver en mapa</div>
+</div>
+<div class="detalles direccion row">
+    <div class="h6">
+        Direccion de entrega
+    </div>
+    <div class="col-8">
+        {{detallesOrden.entrega}}
+    </div>
+    <div class="col-4 btn btn-primary">Ver en mapa</div>
+</div>
+<div class="detalles productos">
+    <br>
+    <div class="row">
+        <div class="pro col-8 h6">
+            Elementos
+        </div>
+        <div class="col-3 h6">
+            Precio
+        </div>
+    </div>
+    <div class="row" *ngFor="let producto of detallesOrden.productos">
+        <div class="pro col-8">{{producto.nombre}}</div>
+        <div class="col-3">L. {{producto.precio}}</div>
+    </div>
+</div>
+<div class="btn btn-primary">Aceptar Orden</div>
