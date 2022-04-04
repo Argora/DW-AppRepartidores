@@ -1,1 +1,11 @@
-<p>navbar works!</p>
+
+  <nav class="navbar navbar-light bg-light fixed-bottom">
+    <form class="container-fluid">
+        <a class="seccion btn" routerLink="/ordenes"><fa-icon [icon]="faHouse"></fa-icon></a>
+        <a class="seccion btn" routerLink="/ordenes/aceptadas"><fa-icon [icon]="faList"></fa-icon></a>
+        <a class="seccion btn" routerLink="/ordenes/completadas"><fa-icon [icon]="faListCheck"></fa-icon></a>
+        <a class="seccion btn" routerLink="/mapa"><fa-icon [icon]="faMap"></fa-icon></a>
+        <a class="seccion btn" routerLink="#"><fa-icon [icon]="faUser"></fa-icon></a>
+    </form>
+  </nav>
+
