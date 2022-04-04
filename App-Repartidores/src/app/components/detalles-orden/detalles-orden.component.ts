@@ -80,6 +80,43 @@ export class DetallesOrdenComponent implements OnInit {
         {nombre: 'producto3', precio: 100},
         {nombre: 'producto4', precio: 40}]
     },
+    {
+      id: 7,
+      estado: 1,
+      despacho: 'Empresa f, barrio f, calle g',
+      entrega: 'Colonia h, barrio f, calle t',
+      hora: '11:00 am',
+      comision: 170,
+      productos: [
+        {nombre: 'producto1', precio: 200},
+        {nombre: 'producto2', precio: 200},
+        {nombre: 'producto3', precio: 100}]
+    },
+    {
+      id: 8,
+      estado: 1,
+      despacho: 'Empresa f, barrio f, calle g',
+      entrega: 'Colonia g, barrio f, calle b',
+      hora: '3:00 pm',
+      comision: 150,
+      productos: [
+        {nombre: 'producto1', precio: 200},
+        {nombre: 'producto2', precio: 500}]
+    },
+    {
+      id: 9,
+      estado: 2,
+      despacho: 'Empresa g, barrio t, calle m',
+      entrega: 'Colonia g, barrio g, calle t',
+      hora: '4:00 pm',
+      comision: 140,
+      productos: [
+        {nombre: 'producto1', precio: 200},
+        {nombre: 'producto2', precio: 50},
+        {nombre: 'producto3', precio: 100},
+        {nombre: 'producto4', precio: 50},
+        {nombre: 'producto4', precio: 50}]
+    }
   ]
 
   constructor(private route: ActivatedRoute, private _router : Router, public titleService: Title) { }

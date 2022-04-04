@@ -1,1 +1,13 @@
-<p>ordenes-aceptadas works!</p>
+<div class="container">
+    <div class="row orden" *ngFor="let ord of ordenesAceptadas" [id]="ord.id">
+        <div class="col-7">
+            <p class="h5">Orden: {{ord.id}}</p>
+            <p>Despacho: {{ord.despacho}}</p>
+            <p>Entrega: {{ord.entrega}}</p>
+        </div>
+        <div class="col-5">
+            Hora: {{ord.hora}}
+            <a routerLink="/ordenes/detalles/{{ord.id}}" class="btn btn-primary">Detalles</a>
+        </div>
+    </div>
+</div>
